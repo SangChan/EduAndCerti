@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  GoodViewController.h
 //  EduAndCerti
 //
 //  Created by SangChan on 2015. 3. 23..
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
-
+@interface GoodViewController : UITableViewController
 
 @end
-

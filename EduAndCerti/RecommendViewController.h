@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  RecommendViewController.h
 //  EduAndCerti
 //
 //  Created by SangChan on 2015. 3. 23..
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
-
+@interface RecommendViewController : UITableViewController
 
 @end
-
