@@ -8,11 +8,10 @@
 
 #import "RecommendViewController.h"
 #import "AFHTTPRequestOperationManager.h"
-#import <MediaPlayer/MediaPlayer.h>
+#import "DetailViewController.h"
 
 @interface RecommendViewController (){
     NSArray *_movieList;
-    MPMoviePlayerViewController *_movieController;
 }
 
 @end
@@ -21,7 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"추천 영상";
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:@"http://192.1.27.211/sample/video?videoType=jei" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //NSLog(@"JSON: %@", responseObject);
@@ -31,29 +29,12 @@
         NSLog(@"Error: %@", error);
     }];
     // Do any additional setup after loading the view.
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(MPMoviePlayerPlaybackStateDidChange:)
-                                                 name:MPMoviePlayerPlaybackStateDidChangeNotification
-                                               object:nil];
 }
 
-- (void)MPMoviePlayerPlaybackStateDidChange:(NSNotification *)notification
-{
-    if (_movieController.moviePlayer.playbackState == MPMoviePlaybackStatePlaying)
-    { //playing
-    }if (_movieController.moviePlayer.playbackState == MPMoviePlaybackStateStopped)
-    { //stopped
-    }if (_movieController.moviePlayer.playbackState == MPMoviePlaybackStatePaused)
-    { //paused
-    }if (_movieController.moviePlayer.playbackState == MPMoviePlaybackStateInterrupted)
-    { //interrupted
-    }if (_movieController.moviePlayer.playbackState == MPMoviePlaybackStateSeekingForward)
-    { //seeking forward
-    }if (_movieController.moviePlayer.playbackState == MPMoviePlaybackStateSeekingBackward)
-    { //seeking backward
-    }
-    
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,16 +68,29 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    [cell.textLabel setText:[[_movieList objectAtIndex:indexPath.row] objectForKey:@"title"]];
+    UIImageView *imageView = (UIImageView *)[cell viewWithTag:10];
+    [imageView setImage:[UIImage imageNamed:@"video_preview_100_56.png"]];
+    UILabel *titleLabel = (UILabel *)[cell viewWithTag:11];
+    [titleLabel setText:[[_movieList objectAtIndex:indexPath.row] objectForKey:@"title"]];
+    UILabel *descLabel = (UILabel *)[cell viewWithTag:12];
+    [descLabel setText:[[_movieList objectAtIndex:indexPath.row] objectForKey:@"desc"]];
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+/*- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSURL *movieURL = [NSURL URLWithString:[[_movieList objectAtIndex:indexPath.row] objectForKey:@"videoUrl"]];
     _movieController = [[MPMoviePlayerViewController alloc] initWithContentURL:movieURL];
     [self presentMoviePlayerViewControllerAnimated:_movieController];
     [_movieController.moviePlayer play];
+}*/
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showDetailForRecommend"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        DetailViewController *controller = [segue destinationViewController];
+        [controller setDetailData:[_movieList objectAtIndex:indexPath.row]];
+    }
 }
 
 

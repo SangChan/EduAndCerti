@@ -7,9 +7,12 @@
 //
 
 #import "GoodViewController.h"
+#import "DetailViewController.h"
 #import "AFHTTPRequestOperationManager.h"
 
-@interface GoodViewController ()
+@interface GoodViewController () {
+    NSArray *_movieList;
+}
 
 @end
 
@@ -17,14 +20,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"영감을 준 영상";
     // Do any additional setup after loading the view.
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:@"http://192.1.27.211/sample/video?videoType=default" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+        //NSLog(@"JSON: %@", responseObject);
+        _movieList = [NSArray arrayWithArray:[responseObject objectForKey:@"body"]];
+        [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
+    
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,5 +47,39 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [_movieList count];
+}
+
+// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"GoodCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    // Configure the cell...
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    UIImageView *imageView = (UIImageView *)[cell viewWithTag:10];
+    [imageView setImage:[UIImage imageNamed:@"video_preview_100_56.png"]];
+    UILabel *titleLabel = (UILabel *)[cell viewWithTag:11];
+    [titleLabel setText:[[_movieList objectAtIndex:indexPath.row] objectForKey:@"title"]];
+    UILabel *descLabel = (UILabel *)[cell viewWithTag:12];
+    [descLabel setText:[[_movieList objectAtIndex:indexPath.row] objectForKey:@"desc"]];
+    return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showDetailForGood"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        DetailViewController *controller = [segue destinationViewController];
+        [controller setDetailData:[_movieList objectAtIndex:indexPath.row]];
+    }
+}
+
 
 @end

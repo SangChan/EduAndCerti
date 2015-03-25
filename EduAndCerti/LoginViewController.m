@@ -1,21 +1,19 @@
 //
-//  RecentViewController.m
+//  LoginViewController.m
 //  EduAndCerti
 //
-//  Created by SangChan on 2015. 3. 23..
+//  Created by SangChan on 2015. 3. 24..
 //  Copyright (c) 2015년 sangchan. All rights reserved.
 //
 
-#import "RecentViewController.h"
-#import "AFHTTPRequestOperationManager.h"
+#import "LoginViewController.h"
 
-@interface RecentViewController () {
-    NSArray *_movieList;
-}
+@interface LoginViewController ()
+- (IBAction)guestLoginPressed:(id)sender;
 
 @end
 
-@implementation RecentViewController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,4 +35,9 @@
 }
 */
 
+- (IBAction)guestLoginPressed:(id)sender {
+    //LoginViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
+    [self dismissViewControllerAnimated:YES completion:^{
+    }];
+}
 @end
