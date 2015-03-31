@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "UIButton+Custom.h"
 
 @interface LoginViewController ()
 - (IBAction)guestLoginPressed:(id)sender;
@@ -17,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.guestLoginButton defaultStyle];
     // Do any additional setup after loading the view.
 }
 

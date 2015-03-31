@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "UIButton+Custom.h"
 #import <MediaPlayer/MediaPlayer.h>
 
 @interface DetailViewController () {
@@ -26,6 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[self playButton]defaultStyle];
     
     self.title = [detailData objectForKey:@"title"];
     [self.thumImageView setImage:[UIImage imageNamed:@"video_preview_704_396.png"]];

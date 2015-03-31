@@ -11,8 +11,9 @@
 @interface DetailViewController : UIViewController
 
 @property (nonatomic, strong) NSDictionary *detailData;
-@property (strong, nonatomic) IBOutlet UIImageView *thumImageView;
-@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
-@property (strong, nonatomic) IBOutlet UILabel *descLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *thumImageView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descLabel;
+@property (weak, nonatomic) IBOutlet UIButton *playButton;
 
 @end

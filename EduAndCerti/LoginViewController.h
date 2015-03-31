@@ -10,4 +10,5 @@
 
 @interface LoginViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIButton *guestLoginButton;
 @end

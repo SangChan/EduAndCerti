@@ -26,6 +26,7 @@
 		634F3A141ABFFDA5000DE5C9 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 634F3A0A1ABFFDA5000DE5C9 /* AFURLResponseSerialization.m */; };
 		634F3A151ABFFDA5000DE5C9 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 634F3A0C1ABFFDA5000DE5C9 /* AFURLSessionManager.m */; };
 		634F3A1A1AC13A80000DE5C9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634F3A191AC13A80000DE5C9 /* LoginViewController.m */; };
+		634F59641ACA6DA300F49D07 /* UIButton+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 634F59631ACA6DA300F49D07 /* UIButton+Custom.m */; };
 		6373F0741AC24AE300E2E7CE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6373F0731AC24AE300E2E7CE /* DetailViewController.m */; };
 		6373F0761AC24D2700E2E7CE /* video_preview_100_56.png in Resources */ = {isa = PBXBuildFile; fileRef = 6373F0751AC24D2700E2E7CE /* video_preview_100_56.png */; };
 		6373F0781AC24D2C00E2E7CE /* video_preview_704_396.png in Resources */ = {isa = PBXBuildFile; fileRef = 6373F0771AC24D2C00E2E7CE /* video_preview_704_396.png */; };
@@ -80,6 +81,8 @@
 		634F3A0C1ABFFDA5000DE5C9 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		634F3A181AC13A80000DE5C9 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		634F3A191AC13A80000DE5C9 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		634F59621ACA6DA300F49D07 /* UIButton+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Custom.h"; sourceTree = "<group>"; };
+		634F59631ACA6DA300F49D07 /* UIButton+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Custom.m"; sourceTree = "<group>"; };
 		6373F0721AC24AE300E2E7CE /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		6373F0731AC24AE300E2E7CE /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		6373F0751AC24D2700E2E7CE /* video_preview_100_56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_preview_100_56.png; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				634F3A191AC13A80000DE5C9 /* LoginViewController.m */,
 				6373F0721AC24AE300E2E7CE /* DetailViewController.h */,
 				6373F0731AC24AE300E2E7CE /* DetailViewController.m */,
+				634F59621ACA6DA300F49D07 /* UIButton+Custom.h */,
+				634F59631ACA6DA300F49D07 /* UIButton+Custom.m */,
 			);
 			path = EduAndCerti;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 			files = (
 				634F3A121ABFFDA5000DE5C9 /* AFURLConnectionOperation.m in Sources */,
 				634F3A0D1ABFFDA5000DE5C9 /* AFHTTPRequestOperation.m in Sources */,
+				634F59641ACA6DA300F49D07 /* UIButton+Custom.m in Sources */,
 				634F3A101ABFFDA5000DE5C9 /* AFNetworkReachabilityManager.m in Sources */,
 				6373F0741AC24AE300E2E7CE /* DetailViewController.m in Sources */,
 				634F3A151ABFFDA5000DE5C9 /* AFURLSessionManager.m in Sources */,
@@ -453,6 +459,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,6 +472,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
