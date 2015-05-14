@@ -30,6 +30,9 @@
 		6373F0741AC24AE300E2E7CE /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6373F0731AC24AE300E2E7CE /* DetailViewController.m */; };
 		6373F0761AC24D2700E2E7CE /* video_preview_100_56.png in Resources */ = {isa = PBXBuildFile; fileRef = 6373F0751AC24D2700E2E7CE /* video_preview_100_56.png */; };
 		6373F0781AC24D2C00E2E7CE /* video_preview_704_396.png in Resources */ = {isa = PBXBuildFile; fileRef = 6373F0771AC24D2C00E2E7CE /* video_preview_704_396.png */; };
+		63CACDE31B04670700E201A4 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CACDE21B04670700E201A4 /* SettingViewController.m */; };
+		63CACDE61B04674F00E201A4 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CACDE51B04674F00E201A4 /* MainTableViewController.m */; };
+		63CACDE91B04676600E201A4 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CACDE81B04676600E201A4 /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +90,12 @@
 		6373F0731AC24AE300E2E7CE /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		6373F0751AC24D2700E2E7CE /* video_preview_100_56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_preview_100_56.png; sourceTree = "<group>"; };
 		6373F0771AC24D2C00E2E7CE /* video_preview_704_396.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video_preview_704_396.png; sourceTree = "<group>"; };
+		63CACDE11B04670700E201A4 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		63CACDE21B04670700E201A4 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		63CACDE41B04674F00E201A4 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		63CACDE51B04674F00E201A4 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		63CACDE71B04676600E201A4 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		63CACDE81B04676600E201A4 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +157,12 @@
 				6373F0731AC24AE300E2E7CE /* DetailViewController.m */,
 				634F59621ACA6DA300F49D07 /* UIButton+Custom.h */,
 				634F59631ACA6DA300F49D07 /* UIButton+Custom.m */,
+				63CACDE11B04670700E201A4 /* SettingViewController.h */,
+				63CACDE21B04670700E201A4 /* SettingViewController.m */,
+				63CACDE41B04674F00E201A4 /* MainTableViewController.h */,
+				63CACDE51B04674F00E201A4 /* MainTableViewController.m */,
+				63CACDE71B04676600E201A4 /* SearchViewController.h */,
+				63CACDE81B04676600E201A4 /* SearchViewController.m */,
 			);
 			path = EduAndCerti;
 			sourceTree = "<group>";
@@ -318,9 +333,12 @@
 			files = (
 				634F3A121ABFFDA5000DE5C9 /* AFURLConnectionOperation.m in Sources */,
 				634F3A0D1ABFFDA5000DE5C9 /* AFHTTPRequestOperation.m in Sources */,
+				63CACDE91B04676600E201A4 /* SearchViewController.m in Sources */,
 				634F59641ACA6DA300F49D07 /* UIButton+Custom.m in Sources */,
 				634F3A101ABFFDA5000DE5C9 /* AFNetworkReachabilityManager.m in Sources */,
+				63CACDE61B04674F00E201A4 /* MainTableViewController.m in Sources */,
 				6373F0741AC24AE300E2E7CE /* DetailViewController.m in Sources */,
+				63CACDE31B04670700E201A4 /* SettingViewController.m in Sources */,
 				634F3A151ABFFDA5000DE5C9 /* AFURLSessionManager.m in Sources */,
 				634F3A131ABFFDA5000DE5C9 /* AFURLRequestSerialization.m in Sources */,
 				634F39981ABFF0AA000DE5C9 /* AppDelegate.m in Sources */,
