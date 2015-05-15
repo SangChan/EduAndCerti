@@ -8,7 +8,9 @@
 
 #import "MainTableViewController.h"
 
-@interface MainTableViewController ()
+@interface MainTableViewController (){
+    NSArray *_movieList;
+}
 
 @end
 
@@ -22,6 +24,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,17 +35,31 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [_movieList count];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
+// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"MovieCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    // Configure the cell...
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    UIImageView *imageView = (UIImageView *)[cell viewWithTag:10];
+    [imageView setImage:[UIImage imageNamed:@"video_preview_100_56.png"]];
+    UILabel *titleLabel = (UILabel *)[cell viewWithTag:11];
+    [titleLabel setText:[[_movieList objectAtIndex:indexPath.row] objectForKey:@"title"]];
+    UILabel *descLabel = (UILabel *)[cell viewWithTag:12];
+    [descLabel setText:[[_movieList objectAtIndex:indexPath.row] objectForKey:@"desc"]];
+    return cell;
 }
+
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

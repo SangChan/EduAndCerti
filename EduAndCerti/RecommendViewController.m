@@ -31,6 +31,7 @@
     }];*/
     // Do any additional setup after loading the view.
     UISegmentedControl *segmentController = [[UISegmentedControl alloc]initWithItems:@[@"읽지 않은 추천자료",@"읽은 추천자료"]];
+    [segmentController setSelectedSegmentIndex:0];
     [(CustomNavigationBar*)self.navigationController.navigationBar setSegmentController:segmentController];
     
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -66,7 +67,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"RecommendCell";
+    static NSString *CellIdentifier = @"MovieCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     // Configure the cell...
     if (cell == nil) {
