@@ -48,7 +48,7 @@
     self.segmentController.frame = CGRectMake(10, self.bounds.size.height - segmentControllerSize.height - 5, self.bounds.size.width-20, segmentControllerSize.height-5);
     
     [self setTitleVerticalPositionAdjustment:-segmentControllerSize.height forBarMetrics:UIBarMetricsDefault];
-    //[[UIBarButtonItem appearanceWhenContainedIn:[CustomNavigationBar class], nil] setBackgroundVerticalPositionAdjustment:-segmentControllerSize.height forBarMetrics:UIBarMetricsDefault];
+    [[UIBarButtonItem appearanceWhenContainedIn:[CustomNavigationBar class], nil] setBackgroundVerticalPositionAdjustment:-segmentControllerSize.height forBarMetrics:UIBarMetricsDefault];
 }
 
 
