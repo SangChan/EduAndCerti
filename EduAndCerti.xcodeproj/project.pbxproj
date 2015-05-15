@@ -33,6 +33,8 @@
 		63CACDE31B04670700E201A4 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CACDE21B04670700E201A4 /* SettingViewController.m */; };
 		63CACDE61B04674F00E201A4 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CACDE51B04674F00E201A4 /* MainTableViewController.m */; };
 		63CACDE91B04676600E201A4 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CACDE81B04676600E201A4 /* SearchViewController.m */; };
+		63CACDEC1B05834A00E201A4 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CACDEB1B05834A00E201A4 /* CategoryViewController.m */; };
+		63CACDF01B058AED00E201A4 /* CustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CACDEF1B058AED00E201A4 /* CustomNavigationBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,10 @@
 		63CACDE51B04674F00E201A4 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		63CACDE71B04676600E201A4 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		63CACDE81B04676600E201A4 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		63CACDEA1B05834A00E201A4 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		63CACDEB1B05834A00E201A4 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		63CACDEE1B058AED00E201A4 /* CustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationBar.h; sourceTree = "<group>"; };
+		63CACDEF1B058AED00E201A4 /* CustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,7 @@
 		634F39911ABFF0AA000DE5C9 /* EduAndCerti */ = {
 			isa = PBXGroup;
 			children = (
+				63CACDED1B058A6900E201A4 /* CustomUI */,
 				634F39921ABFF0AA000DE5C9 /* Supporting Files */,
 				6373F0791AC25AEF00E2E7CE /* Resources */,
 				634F39F91ABFFDA5000DE5C9 /* AFNetworking */,
@@ -155,14 +162,14 @@
 				634F3A191AC13A80000DE5C9 /* LoginViewController.m */,
 				6373F0721AC24AE300E2E7CE /* DetailViewController.h */,
 				6373F0731AC24AE300E2E7CE /* DetailViewController.m */,
-				634F59621ACA6DA300F49D07 /* UIButton+Custom.h */,
-				634F59631ACA6DA300F49D07 /* UIButton+Custom.m */,
 				63CACDE11B04670700E201A4 /* SettingViewController.h */,
 				63CACDE21B04670700E201A4 /* SettingViewController.m */,
 				63CACDE41B04674F00E201A4 /* MainTableViewController.h */,
 				63CACDE51B04674F00E201A4 /* MainTableViewController.m */,
 				63CACDE71B04676600E201A4 /* SearchViewController.h */,
 				63CACDE81B04676600E201A4 /* SearchViewController.m */,
+				63CACDEA1B05834A00E201A4 /* CategoryViewController.h */,
+				63CACDEB1B05834A00E201A4 /* CategoryViewController.m */,
 			);
 			path = EduAndCerti;
 			sourceTree = "<group>";
@@ -226,6 +233,17 @@
 				6373F0771AC24D2C00E2E7CE /* video_preview_704_396.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		63CACDED1B058A6900E201A4 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				634F59621ACA6DA300F49D07 /* UIButton+Custom.h */,
+				634F59631ACA6DA300F49D07 /* UIButton+Custom.m */,
+				63CACDEE1B058AED00E201A4 /* CustomNavigationBar.h */,
+				63CACDEF1B058AED00E201A4 /* CustomNavigationBar.m */,
+			);
+			name = CustomUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +353,7 @@
 				634F3A0D1ABFFDA5000DE5C9 /* AFHTTPRequestOperation.m in Sources */,
 				63CACDE91B04676600E201A4 /* SearchViewController.m in Sources */,
 				634F59641ACA6DA300F49D07 /* UIButton+Custom.m in Sources */,
+				63CACDEC1B05834A00E201A4 /* CategoryViewController.m in Sources */,
 				634F3A101ABFFDA5000DE5C9 /* AFNetworkReachabilityManager.m in Sources */,
 				63CACDE61B04674F00E201A4 /* MainTableViewController.m in Sources */,
 				6373F0741AC24AE300E2E7CE /* DetailViewController.m in Sources */,
@@ -348,6 +367,7 @@
 				634F3A0E1ABFFDA5000DE5C9 /* AFHTTPRequestOperationManager.m in Sources */,
 				634F3A111ABFFDA5000DE5C9 /* AFSecurityPolicy.m in Sources */,
 				634F39951ABFF0AA000DE5C9 /* main.m in Sources */,
+				63CACDF01B058AED00E201A4 /* CustomNavigationBar.m in Sources */,
 				634F39F21ABFFB49000DE5C9 /* RecommendViewController.m in Sources */,
 				634F3A0F1ABFFDA5000DE5C9 /* AFHTTPSessionManager.m in Sources */,
 				634F3A1A1AC13A80000DE5C9 /* LoginViewController.m in Sources */,

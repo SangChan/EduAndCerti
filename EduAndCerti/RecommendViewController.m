@@ -9,6 +9,7 @@
 #import "RecommendViewController.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "DetailViewController.h"
+#import "CustomNavigationBar.h"
 
 @interface RecommendViewController (){
     NSArray *_movieList;
@@ -20,15 +21,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    /*AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:@"http://192.1.27.211/sample/video?videoType=jei" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //NSLog(@"JSON: %@", responseObject);
         _movieList = [NSArray arrayWithArray:[responseObject objectForKey:@"body"]];
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
-    }];
+    }];*/
     // Do any additional setup after loading the view.
+    UISegmentedControl *segmentController = [[UISegmentedControl alloc]initWithItems:@[@"읽지 않은 추천자료",@"읽은 추천자료"]];
+    [(CustomNavigationBar*)self.navigationController.navigationBar setSegmentController:segmentController];
+    
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
 }
