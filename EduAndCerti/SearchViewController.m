@@ -22,7 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.searchDisplayController setDisplaysSearchBarInNavigationBar:YES];
+    //[self.searchDisplayController setDisplaysSearchBarInNavigationBar:YES];
+    //[self.searchDisplayController setActive:YES];
     
     bestKeywordArray = @[@"교재분류표",@"과학",@"쿠키북RP",@"스스로펜",@"수학",@"학교공부",@"해답모음집",@"간담회",@"사회",@"학교공부점검하기"];
     [self.tableView reloadData];
