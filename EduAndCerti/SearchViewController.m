@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    //[self.searchDisplayController setDisplaysSearchBarInNavigationBar:YES];
+    [self.searchDisplayController setDisplaysSearchBarInNavigationBar:YES];
     //[self.searchDisplayController setActive:YES];
     
     bestKeywordArray = @[@"교재분류표",@"과학",@"쿠키북RP",@"스스로펜",@"수학",@"학교공부",@"해답모음집",@"간담회",@"사회",@"학교공부점검하기"];
@@ -42,15 +42,24 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KeywordCell" forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    cell.textLabel.text = [bestKeywordArray objectAtIndex:indexPath.row];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:(tableView == self.searchDisplayController.searchResultsTableView) ? @"MovieCell" : @"KeywordCell" forIndexPath:indexPath];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        
+    }
+    else {
+        cell.textLabel.text = [bestKeywordArray objectAtIndex:indexPath.row];
+    }
     
     return cell;
 }
 
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
+    return NO;
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    return YES;
+}
 
 /*
 #pragma mark - Navigation
