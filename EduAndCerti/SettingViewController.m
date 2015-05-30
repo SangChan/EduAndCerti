@@ -35,6 +35,16 @@
 }
 */
 
+- (CGFloat)tableView:(UITableView *)tableView
+estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView
+heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44;
+}
+
 - (IBAction)pressedClose:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }

@@ -464,7 +464,7 @@
                         <sections>
                             <tableViewSection headerTitle="교육자료실 설정" footerTitle="이전 중단한 부분부터 이어올 수 있습니다." id="yzO-Cc-KYd">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="bbG-4s-Wbk" style="IBUITableViewCellStyleDefault" id="ZXi-2T-OuO">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="bbG-4s-Wbk" rowHeight="44" style="IBUITableViewCellStyleDefault" id="ZXi-2T-OuO">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZXi-2T-OuO" id="siu-g5-5cB">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -489,7 +489,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="알림 설정" footerTitle="알림을 설정하시면 새로운 자료 업데이트 및 공지에 대한 알림 메시지를 받아 보실 수 있습니다." id="wrv-KK-e6e">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="cPv-hP-TK8" style="IBUITableViewCellStyleDefault" id="1d4-71-2Z9">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="cPv-hP-TK8" rowHeight="44" style="IBUITableViewCellStyleDefault" id="1d4-71-2Z9">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1d4-71-2Z9" id="yvu-WK-Fzh">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -510,7 +510,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="3lv-tD-nHf" style="IBUITableViewCellStyleDefault" id="by1-IF-gby">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="3lv-tD-nHf" rowHeight="44" style="IBUITableViewCellStyleDefault" id="by1-IF-gby">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="by1-IF-gby" id="7rc-IV-vyz">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -535,7 +535,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="로그인 설정" footerTitle="자동 로그인을 설정하시면 이후 별도 로그인 절차없이 로그인 서비스를 이용하실 수 있습니다." id="hJ9-26-gEl">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="B2a-4v-xoU" style="IBUITableViewCellStyleDefault" id="Xbt-IY-IVK">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="B2a-4v-xoU" rowHeight="44" style="IBUITableViewCellStyleDefault" id="Xbt-IY-IVK">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xbt-IY-IVK" id="GdZ-8b-g5k">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -574,7 +574,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="버전정보" footerTitle="현재 버전은 최신버전입니다." id="im6-gw-js6">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Fpy-Eg-drK" style="IBUITableViewCellStyleDefault" id="9hT-5U-Fqi">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Fpy-Eg-drK" rowHeight="44" style="IBUITableViewCellStyleDefault" id="9hT-5U-Fqi">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9hT-5U-Fqi" id="AXG-52-K2l">
                                             <autoresizingMask key="autoresizingMask"/>
