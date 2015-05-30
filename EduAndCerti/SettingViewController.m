@@ -35,25 +35,6 @@
 }
 */
 
-- (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section
-{
-    UITableViewHeaderFooterView *footer = (UITableViewHeaderFooterView *)view;
-    footer.textLabel.textColor = [UIColor darkGrayColor];
-    footer.textLabel.font = [UIFont systemFontOfSize:10];
-    footer.textLabel.numberOfLines = 0;
-    footer.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 10.0f;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    return 25.0f;
-}
-
 - (IBAction)pressedClose:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
